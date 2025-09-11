@@ -1,0 +1,9 @@
+# jekyll s -b /development -H 192.168.178.28 -P 8081
+TZ: Europe/Berlin
+baseurl: /development/
+gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
+paginate: 6
+paginate_path: "/seite:num/"
+
+taglist: 5
