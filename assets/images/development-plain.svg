@@ -63,10 +63,16 @@
        width="1920"
        height="1080"
        x="0"
+       y="0" /><rect
+       style="fill:#6f6abf;fill-opacity:1;stroke:#feaf56;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect62"
+       width="1920.3418"
+       height="1075.3914"
+       x="0"
        y="0" /></g><g
      id="layer5"
      style="display:inline"><rect
-       style="display:inline;fill:#fedeb5;fill-opacity:1;stroke:#3d3e52;stroke-width:37.7953;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#ffcd93;fill-opacity:1;stroke:#3d3e52;stroke-width:37.7953;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect47"
        width="1179.7003"
        height="663.58142"
