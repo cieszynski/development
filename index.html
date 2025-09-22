@@ -1,0 +1,95 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>development</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#646e81">
+    <meta name="description" content="A comprehensive list of my programming projects">
+    <meta name="author" content="Stephan Cieszynski">
+
+    <style>
+        @import url("/assets/css/global.css");
+
+        @layer theme {
+
+            body {
+                background-color: #646e81;
+            }
+
+            footer {
+                color: #fff;
+            }
+
+            header {
+                color: #fff;
+            }
+
+            main {
+                color: #fff;
+                background-color: #363c45ff;
+                flex-flow: column;
+            }
+
+            ol {
+                padding: 8px 16px 0 16px;
+                line-height: 1.5;
+                font-family: "inter";
+            }
+
+            p {
+                padding: 8px 0;
+                line-height: 1.5;
+            }
+
+            section {
+                & a {
+                    text-decoration: underline;
+                }
+
+                &>h3 {
+                    color: #efb476ff;
+                }
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <a href="/">cieszynski.de</a>
+        <a href="../">back</a>
+    </header>
+    <h1>
+        <img src="{{ 'assets/images/development-plain.svg' | relative_url }}"
+            alt="development - latest posts  #{{ paginator.page }}">
+    </h1>
+    <main>
+        <h2>recent posts #{{ paginator.page }}</h2>
+        {% for post in paginator.posts %}
+        <section>
+            <h3>{{ post.title }}</h3>
+            {{ post.content }}
+        </section>
+        {% endfor %}
+    </main>
+    <nav>
+        {% for num in (1..paginator.total_pages) %}
+        {% if num == paginator.page %}
+        <a class="current">{{ num }}</a>
+        {% elsif num == 1 %}
+        <a href="{{ site.paginate_path | relative_url | replace: 'seite:num/', '' }}">{{ num }}</a>
+        {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', num }}">{{ num }}</a>
+        {% endif %}
+        {% endfor %}
+    </nav>
+    <footer>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
+        <a href="/rechtliches.html">Impressum | Datenschutz</a>
+    </footer>
+</body>
